@@ -348,6 +348,36 @@
       gap: 70px;
       align-items: center;
     }
+    .meet-april-section { background: var(--off-white); }
+    .meet-april-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .meet-april-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 14px;
+      display: block;
+    }
+    .meet-april-title {
+      color: var(--charcoal);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .meet-april-bio {
+      color: #4a4a4a;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
     .coolsculpt-img {
       width: 100%;
       aspect-ratio: 4/3;
@@ -671,6 +701,7 @@
     }
     @media (max-width: 600px) {
       .services-grid { grid-template-columns: 1fr; }
+      .meet-april-inner { grid-template-columns: 1fr; gap: 32px; }
       .nav-inner { height: auto; min-height: 80px; padding: 8px 16px; }
       .nav-logo span { font-size: 27px; }
       .nav-logo small { font-size: 12px; letter-spacing: 1px; }
@@ -963,6 +994,20 @@
           <span class="service-card-title">Empower</span>
           <span class="service-card-cta">Learn more →</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET APRIL -->
+  <section class="meet-april-section">
+    <div class="meet-april-inner">
+      <img class="meet-april-photo" src="images/aprilred.jpeg" alt="April Johnson, Nurse Injector" loading="lazy" />
+      <div class="meet-april-content">
+        <p class="section-eyebrow">Meet April</p>
+        <h2 class="section-title">April Johnson</h2>
+        <p class="meet-april-title">Nurse Injector</p>
+        <p class="meet-april-bio">April brings 26 years of experience in the medical field. She is detail-oriented and passionate about increasing her clients' confidence and self-esteem. Outside the clinic, April is a certified personal trainer and Cycle instructor who enjoys running, staying active, and is an avid dog lover.</p>
+        <a href="april-johnson.html" class="btn-solid">Meet April</a>
       </div>
     </div>
   </section>
