@@ -408,56 +408,63 @@
     .services-header { margin-bottom: 50px; }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
     }
     .service-card {
       background: var(--white);
       border: 1px solid #e8e2d8;
-      padding: 28px 20px;
+      border-radius: 14px;
+      padding: 24px;
       text-align: center;
       text-decoration: none;
       color: var(--charcoal);
-      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .service-card:hover {
       border-color: var(--gold);
-      box-shadow: 0 8px 30px rgba(184,150,90,0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.14);
       transform: translateY(-4px);
     }
     .service-card img {
-      width: 60px;
-      height: 60px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 8px;
       filter: sepia(20%) saturate(80%);
     }
-    .service-card span {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    .service-card-title {
+      font-size: 16px;
+      line-height: 1.35;
       font-weight: 600;
       color: var(--charcoal);
     }
-    .service-card:hover span { color: var(--gold); }
+    .service-card-cta {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .service-card:hover .service-card-title { color: var(--gold); }
 
     /* alt services (dark bg) */
     .services-section.dark { background: var(--charcoal); }
     .services-section.dark .section-eyebrow { color: var(--gold-light); }
     .services-section.dark h2.section-title { color: var(--white); }
     .services-section.dark .section-desc { color: #ede9fe !important; }
+    .services-section.dark .service-card-cta { color: var(--gold-light); }
     .services-section.dark .service-card {
       background: rgba(255,255,255,0.04);
       border-color: rgba(255,255,255,0.1);
       color: var(--white);
     }
-    .services-section.dark .service-card span { color: rgba(255,255,255,0.85); }
     .services-section.dark .service-card:hover { border-color: var(--gold); background: rgba(184,150,90,0.08); }
-    .services-section.dark .service-card:hover span { color: var(--gold-light); }
+    .services-section.dark .service-card .service-card-title { color: var(--white); }
+    .services-section.dark .service-card:hover .service-card-title { color: var(--gold-light); }
 
     /* ─── CTA SECTION ─── */
     .cta-section {
@@ -653,6 +660,7 @@
       .milestone-inner,
       .coolsculpt-inner,
       .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -662,6 +670,7 @@
       .services-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
       .nav-inner { height: auto; min-height: 80px; padding: 8px 16px; }
       .nav-logo span { font-size: 27px; }
       .nav-logo small { font-size: 12px; letter-spacing: 1px; }
@@ -862,35 +871,43 @@
       <div class="services-grid">
         <a href="fillers.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=70" alt="Fillers" loading="lazy" />
-          <span>Fillers</span>
+          <span class="service-card-title">Fillers</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="peels.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=200&q=70" alt="Peels" loading="lazy" />
-          <span>Peels</span>
+          <span class="service-card-title">Peels</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="xeomin.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=200&q=70" alt="Xeomin" loading="lazy" />
-          <span>Xeomin</span>
+          <span class="service-card-title">Xeomin</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="botox.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=200&q=70" alt="Botox" loading="lazy" />
-          <span>Botox</span>
+          <span class="service-card-title">Botox</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="kybella.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=200&q=70" alt="Kybella" loading="lazy" />
-          <span>Kybella</span>
+          <span class="service-card-title">Kybella</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="prp.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=200&q=70" alt="PRP" loading="lazy" />
-          <span>PRP Therapy</span>
+          <span class="service-card-title">PRP Therapy</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="microneedling.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=200&q=70" alt="Microneedling" loading="lazy" />
-          <span>Microneedling</span>
+          <span class="service-card-title">Microneedling</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="teeth-whitening.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=200&q=70" alt="Teeth Whitening" loading="lazy" />
-          <span>Teeth Whitening</span>
+          <span class="service-card-title">Teeth Whitening</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
       </div>
     </div>
@@ -908,35 +925,43 @@
       <div class="services-grid">
         <a href="weight-loss.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=200&q=70" alt="Medical Weight Loss" loading="lazy" />
-          <span>Medical Weight Loss</span>
+          <span class="service-card-title">Medical Weight Loss</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="morpheus8-cool.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&q=70" alt="Morpheus8 Cool Max" loading="lazy" />
-          <span>Morpheus8 Cool Max</span>
+          <span class="service-card-title">Morpheus8 Cool Max</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="laser-hair-removal.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=200&q=70" alt="Laser Hair Removal" loading="lazy" />
-          <span>Laser Hair Removal</span>
+          <span class="service-card-title">Laser Hair Removal</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="ultherapy.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=200&q=70" alt="Ultherapy" loading="lazy" />
-          <span>Ultherapy</span>
+          <span class="service-card-title">Ultherapy</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="thermi-smooth.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=200&q=70" alt="ThermiSmooth" loading="lazy" />
-          <span>ThermiSmooth</span>
+          <span class="service-card-title">ThermiSmooth</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="morpheus8.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=200&q=70" alt="Morpheus8" loading="lazy" />
-          <span>Morpheus8</span>
+          <span class="service-card-title">Morpheus8</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="lumecca.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=200&q=70" alt="Lumecca IPL" loading="lazy" />
-          <span>Lumecca IPL</span>
+          <span class="service-card-title">Lumecca IPL</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
         <a href="empower.html" class="service-card">
           <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=200&q=70" alt="Empower" loading="lazy" />
-          <span>Empower</span>
+          <span class="service-card-title">Empower</span>
+          <span class="service-card-cta">Learn more →</span>
         </a>
       </div>
     </div>
