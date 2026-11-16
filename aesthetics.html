@@ -458,6 +458,13 @@
       .footer-inner { grid-template-columns: 1fr; }
       .treatments-grid { grid-template-columns: 1fr; }
     }
+  @media (max-width: 600px) {
+    .nav-inner { height: auto; min-height: 80px; padding: 8px 16px; }
+    .nav-phone { display: none; }
+    .top-bar { font-size: 10px; letter-spacing: 0.5px; white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
+    img, video, iframe { max-width: 100%; }
+    .hamburger, #hb { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-shrink: 0; }
+  }
   </style>
 </head>
 <body>

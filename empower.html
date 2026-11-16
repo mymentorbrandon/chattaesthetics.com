@@ -141,7 +141,15 @@
 .mobile-nav.open{display:block}
 .mobile-nav a{display:block;padding:14px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:#2c2c2c;text-decoration:none;border-bottom:1px solid #f0ede8;transition:background .2s,color .2s}
 .mobile-nav a:hover{background:#ede9fe;color:#7c3aed}
-.mobile-nav .mob-section{background:#faf9f7;padding:10px 24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:#7c3aed}</style>
+.mobile-nav .mob-section{background:#faf9f7;padding:10px 24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:#7c3aed}
+  @media (max-width: 600px) {
+    .nav-inner { height: auto; min-height: 80px; padding: 8px 16px; }
+    .nav-phone { display: none; }
+    .top-bar { font-size: 10px; letter-spacing: 0.5px; white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
+    img, video, iframe { max-width: 100%; }
+    .hamburger, #hb { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-shrink: 0; }
+  }
+</style>
 </head>
 <body>
 
